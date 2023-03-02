@@ -37,7 +37,7 @@ Page({
      */
     onReady() {
         this.getDate()
-        time= setInterval(()=>{
+        time=setInterval(()=>{
          if(this.data.count===1){
             clearInterval(time)
             wx.reLaunch({

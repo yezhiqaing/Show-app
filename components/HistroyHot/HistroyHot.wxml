@@ -1,0 +1,9 @@
+<view class="histroy">
+ <view class="histop">
+    <view class="title">历史记录</view>
+    <van-icon name="delete-o" />
+ </view>
+ <view class="hisbotton">
+    <van-tag color="#f2826a" wx:for="{{10}}" type="primary">标签</van-tag>
+ </view>
+</view>

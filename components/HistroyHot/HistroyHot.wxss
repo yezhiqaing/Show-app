@@ -1,0 +1,15 @@
+.histroy {
+  background-color: #fff;
+  padding: 20rpx;
+}
+.histroy .histop {
+  display: flex;
+  justify-content: space-between;
+}
+.histroy .histop .title {
+  margin-bottom: 20rpx;
+}
+.histroy .hisbotton van-tag {
+  display: inline-block;
+  margin: 10rpx 20rpx;
+}

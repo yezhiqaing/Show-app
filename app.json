@@ -6,7 +6,11 @@
         "pages/cart/cart",
         "pages/user/user",
         "pages/initiate/initiate",
-        "pages/categary/categary"
+        "pages/categary/categary",
+        "pages/popup/popup",
+        "components/HistroyHot/HistroyHot",
+        "components/TipsList/TipsList",
+        "components/ProductList/ProductList"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -29,18 +33,18 @@
             },
             {
                 "pagePath": "pages/categary/categary",
-                "text": "分类",
-                "icon":"apps-o"
+                "text": "分类"
+        
             },
             {
                 "pagePath": "pages/cart/cart",
-                "text": "购物车",
-                "icon":"cart-o"
+                "text": "购物车"
+     
             },
             {
                 "pagePath": "pages/user/user",
-                "text": "我的",
-                "icon":"user-o"
+                "text": "我的"
+          
             }
         ]
     },
