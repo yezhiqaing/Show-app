@@ -1,0 +1,20 @@
+<view class="content">
+  <!-- 右边倒计时 -->
+  <view class="num_top">
+   <view class="right_wrap">
+    <view class="num">{{count}}</view>
+    <view bindtap="gotoindex">跳过</view>
+    </view>
+  </view>
+    <image mode="aspectFit" class="img1" src="../../images/img_light.png" ></image>
+
+    <image mode="aspectFit" class="img2" src="../../images/img_txt.png"></image>
+   <!-- 底部 -->
+   <view class="footer">
+    <text class="text1">悦读</text>
+    <view class="right_txt">
+    <text class="text2">{{mounth}}</text>
+    <text class="text3">{{timeStr}}</text>
+    </view>
+   </view>
+</view>

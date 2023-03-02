@@ -1,0 +1,15 @@
+<view class="commit">
+  <image class="img" src="../../images/avatar.png" mode="widthFix"></image>
+   <view class="input_wrap">
+    <van-icon class="icon" name="manager-o" />
+    <input bindinput="setInputval" data-key="username" type="text" placeholder="请输入手机号/邮箱"/>
+   </view>
+   <view class="input_wrap">
+    <van-icon class="icon" name="goods-collect-o" />
+    <input  bindinput="setInputval" data-key="password"  type="text" 	password="true" placeholder="请输入密码"/>
+   </view>
+
+<button class="btn">登陆</button>
+<view class="zhu">立即注册</view>
+
+</view>

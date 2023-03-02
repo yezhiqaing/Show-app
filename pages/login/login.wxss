@@ -1,0 +1,48 @@
+.commit .img {
+    width: 160rpx;
+    height: 160rpx;
+    display: block;
+    margin: 170rpx auto 130rpx;
+}
+.input_wrap{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50rpx;
+    height: 63rpx;
+    width: 540rpx;
+    display: flex;
+    border:1px solid #cccccc;
+
+}
+.input_wrap .icon{
+    color: #cccccc;
+    padding: 0 15rpx 0 23rpx;
+    border-right: 1px solid #cccccc;
+    height: 45rpx;
+    display: flex;
+    
+}
+.input_wrap input{
+    padding-left: 18rpx;
+    font-size: 27rpx;
+}
+ .input_wrap:nth-child(2){  
+   margin-bottom: 27rpx;
+   
+}
+.btn{
+    margin-top: 200rpx;
+    width: 500rpx;
+    border-radius: 50rpx;
+    background-color: #5aabfb;
+}
+.zhu{
+    margin-top: 10rpx;
+    text-align: center;
+    color: #50a6fb;
+    font-size: 28rpx;
+    font-weight: 600;
+}
+
+
