@@ -1,0 +1,24 @@
+<template name="tip">
+    <van-row  style="text-align: center;">
+  <van-col span="8">
+    <van-icon color="red" name="passed" />7天无忧退货
+  </van-col>
+  <van-col  span="8">
+    <van-icon color="red" name="passed" />48小时快速退费
+  </van-col>
+  <van-col  span="8">
+    <van-icon color="red" name="passed" />满88元免邮费
+  </van-col>
+</van-row>
+</template>
+
+<template name="ban">
+    <view class="report">
+     <view class="solic"></view>
+     <view  class="solicenter">{{title}}</view>
+     <view class="solic"></view>
+        </view>
+</template>
+.ban{
+    w
+}

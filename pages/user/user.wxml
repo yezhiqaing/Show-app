@@ -1,2 +1,34 @@
-<!--pages/user/user.wxml-->
-<text>pages/user/user.wxml</text>
+<view class="user">
+    <view class="login">
+        <view class="loginleft">
+            <image src="{{assets}}"></image>
+            <view bindtap="goToLogin">{{name}}</view>
+        </view>
+        <van-icon bindtap="logout" name="{{Token?'cross':'arrow'}}" />
+    </view>
+    <van-grid column-num="3">
+        <van-grid-item wx:for="{{iconArr}}" wx:key="index" icon="{{item.icon}}" text="{{item.text}}" />
+
+    </van-grid>
+</view>
+<van-popup class="popus" style="z-index:99999;position: relative;" show="{{ show }}" bind:close="onClose">
+    <van-cell-group>
+  <van-field
+    value="{{ username }}"
+    label="用户名"
+    error-message="{{logio_username?'请输入用户名':''}}"
+    placeholder="请输入用户名"
+    bind:input="Inputusername"
+  />
+  <van-field
+    value="{{ pwd }}"
+    label="手机号"
+    placeholder="请输入密码"
+    error-message="{{logio_password?'请输入密码':''}}"
+   bind:input="Inputpassword"
+  />
+</van-cell-group>
+<van-button bindtap="Login"  block type="danger">登陆</van-button>
+</van-popup>
+
+<van-dialog id="van-dialog" />

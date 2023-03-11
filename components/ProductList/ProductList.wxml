@@ -1,2 +1,11 @@
-<!--components/ProductList/ProductList.wxml-->
-<text>components/ProductList/ProductList.wxml</text>
+
+<van-dropdown-menu>
+  <van-dropdown-item disabled  title="综合" value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item bind:change="priceChane" title="价格" value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item bind:change="cateChange" title="分类" value="{{ filterCategoryId }}" options="{{filterCategory}}" />
+</van-dropdown-menu>
+<GoodsList Goodslist="{{Goodslist}}"></GoodsList>
+
+
+
+

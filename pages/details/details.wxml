@@ -1,0 +1,72 @@
+<view class="detailbox">
+  <swiper indicator-dots>
+   <swiper-item wx:for="{{banner}}" wx:key="index">
+    <image mode="heightFix" src="{{item.img_url}}"></image>
+   </swiper-item>
+  </swiper>
+  <import src="./template/Tip.wxml"/>
+  <template is="tip"></template>
+     <!-- 产品信息 -->
+   <view class="info">
+   <view class="title">{{info.name}}</view>
+   <view class="text">{{info.goods_brief}}</view>
+   <view class="price">{{d1.RMBmater(info.retail_price)}}</view>
+   </view>
+   <wxs src="/utils/fang.wxs" module="d1"></wxs>
+   <van-cell bindtap="onShowSku" title="展示弹出层" is-link />
+    <!-- 产品参数 -->
+   <view class="attribute">
+   <view class="attrtitle">商品参数</view>
+    <view wx:for="{{attribute}}" wx:key="index" class="attre_item">
+     <view class="name">{{item.name}}</view>
+     <view class="value">{{item.value}}</view>
+    </view>
+
+   </view>
+      <!-- 图片 -->
+   <rich-text nodes="{{ info.goods_desc}}"></rich-text>
+       <!-- 提醒 -->
+    <view  class="reportbox">
+      <template is="ban" data="{{title:'常见问题'}}"></template>
+ <view wx:for="{{issue}}" wx:key="index" class="resole">
+        
+         <view class="raido">
+         <view class="yuan"></view>
+            <view class="resoletop">{{item.question}}</view>
+         </view>
+        <view class="resolebotton">{{item.answer}}</view>
+    </view>
+    </view>
+    <template is="ban" data="{{title:'相关产品'}}"></template>
+   <Goodslist Goodslist="{{Goodslist}}"></Goodslist>
+</view>
+<van-goods-action style="z-index:998;position: relative;">
+  <van-goods-action-icon  icon-class="{{isOk?'red':''}}"  bindtap="collection" icon="{{isOk? 'star':'star-o'}}" text="{{isOk?'收藏':'未收藏'}}"  />
+  <van-goods-action-icon bindtap="goToCart" icon="cart-o" text="购物车" info="{{carttotal}}" />
+<van-goods-action-button bindtap="addTocart" text="加入购物车" type="warning" />
+  <van-goods-action-button bindtap="gotoorders" text="立即购买" />
+</van-goods-action>
+
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  custom-style="height:540rpx;"
+  bind:close="onClose"
+>
+  <view class="Sukbox">
+    <van-icon bindtap="onClose" class="close_suk" name="cross" />
+   <view class="Suktop">
+    <image  src="{{info.list_pic_url}}"></image>
+    <view class="Sukpar">
+        <view >价格:{{d1.RMBmater(info.retail_price)}}</view>
+    <view>库存:{{info.goods_number}}</view>
+    </view>
+   </view>
+   <view class="Sukbottom">
+     <view class="shu">数量</view>
+     <van-stepper value="{{skustep}}" bind:change="onChange" />
+   </view>
+  </view>
+</van-popup>
+
+

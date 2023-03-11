@@ -1,0 +1,28 @@
+.goodslist {
+  justify-content: space-between;
+  padding: 15rpx;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.goodslist .error {
+  margin: 0 auto;
+}
+.goodslist .goodslist_item {
+  background-color: #fff;
+  width: 49%;
+  margin-bottom: 16rpx;
+}
+.goodslist .goodslist_item image {
+  width: 100%;
+}
+.goodslist .goodslist_item .title {
+  font-size: 25rpx;
+  text-align: center;
+}
+.goodslist .goodslist_item .price {
+  text-align: center;
+  color: darkred;
+  margin: 15rpx 0;
+}

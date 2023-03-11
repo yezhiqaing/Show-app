@@ -1,0 +1,4 @@
+<view class="bran">
+    <image src="{{bran.list_pic_url}}"></image>
+    <view class="brantitle">{{bran.simple_desc}}</view>
+</view>

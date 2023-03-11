@@ -1,2 +1,28 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<view class="cartbox">
+    <import src="../details/template/Tip" />
+    <template is="tip"></template>
+
+
+
+    <van-checkbox-group value="{{ resul }}" bind:change="onChange">
+        <van-checkbox disabled="{{isEditing}}" wx:for="{{cartdata}}" bindtap="xuChange" data-item="{{item}}" wx:key="product_id" name="{{item.product_id}}">
+
+            <van-swipe-cell right-width="{{ 65 }}" >
+                <van-card class="card" num="{{item.number}}" price="{{item.retail_price}}" title="{{item.goods_name}}" thumb="{{item.list_pic_url }}" />
+                <!-- <view  slot="right">删除</view> -->
+                <van-button data-priid="{{item.product_id}}" bindtap="deltecheck" slot="right" type="danger">删除</van-button>
+            </van-swipe-cell>
+
+
+            <van-stepper wx:if="{{isEditing}}" style="text-align: right;" value="{{ item.number }}" data-item="{{item}}" bind:change="steeperchecked" />
+        </van-checkbox>
+
+    </van-checkbox-group>
+
+</view>
+<van-submit-bar decimal-length price="{{counprice*100}}" button-text="提交订单" bind:submit="onClickButton" tip="{{ true }}">
+    <van-checkbox disabled="{{cartdata.length==0}}"  value="{{ checked }}" bind:change="onquancheck">
+        全选
+    </van-checkbox>
+    <view slot="tip">累计共{{cartshoop}}件商品,可点击<van-button bindtap="bian" style="margin: 0 5rpx;" size="mini" type="{{isEditing?'danger':'primary'}}">{{isEditing?"完成删除":"编辑"}}</van-button>按钮进行数量的修改</view>
+</van-submit-bar>

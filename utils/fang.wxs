@@ -1,0 +1,15 @@
+function RMBmater(val){
+if(typeof(val)==="undefined"){
+    return
+}else{
+    return "￥"+val.toFixed(2)+"元"
+}
+}
+
+
+
+
+module.exports = {
+    RMBmater:RMBmater,
+   
+}

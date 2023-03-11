@@ -1,7 +1,95 @@
-swiper {
+.Home {
+  padding-bottom: 100rpx;
+}
+.Home swiper {
   height: 400rpx;
 }
-swiper image {
+.Home swiper image {
   width: 100vw;
   height: 400rpx;
+}
+.Home .channtitle {
+  margin-top: 20rpx;
+  font-size: 25rpx;
+}
+.Home .brandList {
+  background-color: white;
+}
+.Home .brandList .img {
+  display: block;
+  position: relative;
+}
+.Home .brandList .info {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+.Home .brandList .info .title {
+  font-size: 27rpx;
+}
+.Home .brandList .info .price {
+  color: red;
+  margin-top: 10rpx;
+  font-size: 24rpx;
+}
+.Home .brandList .plie {
+  height: 50rpx;
+  font-weight: 600;
+  padding-top: 25rpx;
+  text-align: center;
+  line-height: 50rpx;
+}
+.Home .news {
+  margin-top: 30rpx;
+  background-color: white;
+}
+.Home .news .newtitle {
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+}
+.Home .popularity {
+  background-color: white;
+}
+.Home .popularity .populvs {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 40rpx;
+}
+.Home .popularity .popularitylist {
+  padding: 0 70rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+  background-color: #fafafa;
+}
+.Home .popularity .popularitylist image {
+  width: 20%;
+}
+.Home .popularity .popularitylist .hotinfo {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-left: 40rpx;
+}
+.Home .popularity .popularitylist .hotinfo .name {
+  font-size: 30rpx;
+}
+.Home .popularity .popularitylist .hotinfo .goods {
+  font-size: 20rpx;
+}
+.Home .popularity .popularitylist .hotinfo .price {
+  color: #8d0000;
+}
+.Home .fenlei .fentilte {
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: white;
+  text-align: center;
+  font-size: 40rpx;
+  padding-top: 30rpx;
 }

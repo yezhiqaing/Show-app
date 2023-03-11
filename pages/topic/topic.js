@@ -1,68 +1,60 @@
 // pages/topic/topic.js
+import {Specialdata} from "../../request/api"
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+       page:1,
+       size:10,
+       Special:[],
+       count:1
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        this.Specialdata()
     },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
+     
+  async  Specialdata(){
+         let result= await Specialdata({data:{
+            page:this.data.page,
+            size:this.data.size
+        }})
+        // console.log(result);
+         let {data,count}=result.data
+         this.setData({
+            Special:data ,
+            count:count  
+        })
     },
+    onclick(e){
+        let {isok}= e.currentTarget.dataset
+        if(isok==="true"){
+            this.data.page--
+            if(this.data.page<=0){
+           
+                wx.showToast({
+                  title: '已经没数据',
+                  icon:"error"
+                })
+                return
+            }
+            this.Specialdata()
+        }else{
+            if(this.data.page*this.data.size>=this.data.count){
+                wx.showToast({
+                    title: '已经没数据',
+                    icon:"error"
+                  })
+                return
+            }
+            this.data.page++
+            this.Specialdata()
 
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-      this.getTabBar().setData({
-          active:1
-      })
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
+        }
     }
 })

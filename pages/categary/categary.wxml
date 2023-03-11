@@ -1,2 +1,29 @@
-<!--pages/categary/categary.wxml-->
-<text>pages/categary/categary.wxml</text>
+<view class="categary">
+    <van-search bind:click-input="search" value="{{ value }}" placeholder="请输入搜索关键词" />
+    <view class="Crud">
+        <!-- 侧边栏 -->
+        <view class="left">
+            <van-sidebar  active-key="{{ activeKey }}">
+            <van-sidebar-item bindtap="onsidebarChange" data-id="{{item.id}}" wx:for="{{categoryList}}" wx:key="index" title="{{item.name}}" />
+        </van-sidebar>
+        </view>
+        <!-- 右边 -->
+        <view class="right">
+            <!-- 图片 -->
+            <view class="pic">
+                <image mode="widthFix" src="{{currentCategory.banner_url}}"></image>
+                <text>{{currentCategory.front_name}}</text>
+            </view>
+            <!-- 标题 -->
+            <import src="../../pages/details/template/Tip"></import>
+            <template is="ban" data="{{title:'哈哈'}}"></template>
+            <van-grid center column-num="3">
+                <van-grid-item bindtap="gotoditai" data-item="{{item}}"  use-slot wx:for="{{ currentCategory.subCategoryList }}"  wx:key="index">
+                    <image  mode="widthFix" style="width: 50%; height: 90px;" src="{{item.wap_banner_url}}" />
+                    <view style="margin-top: 8px;color: #646566; font-size: 12px;">{{item.name}}</view>
+                </van-grid-item>
+            </van-grid>
+        </view>
+    </view>
+
+</view>

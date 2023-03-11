@@ -1,4 +1,5 @@
 // custom-tab-bar/index.js
+
 Component({
     data:{
         list:[
@@ -30,13 +31,31 @@ Component({
            
 
         ],
-        active:0 
+        active:0
     },
     methods:{
         onChange(e){
-            this.setData({
-                active:e.detail
-            })
+        
+            let Token=wx.getStorageSync('Token')
+           if(this.data.list[e.detail].pagePath=="/pages/cart/cart"&&!Token){ 
+           getApp().globalData.logoisok=true
+            getApp().globalData.logocart=true
+           getApp().globalData.prevRoutes="/pages/cart/cart"
+                wx.showToast({
+                  title: '请先登陆',
+                  duration:2000,
+                  icon:"loading"
+                })
+            setTimeout(()=>{
+                wx.switchTab({
+                    url: '/pages/user/user',
+                  })
+            },1000)
+
+            return
+            }else{
+                getApp().globalData.logoisok=false
+            }
          wx.switchTab({
            url:this.data.list[e.detail].pagePath,
          })

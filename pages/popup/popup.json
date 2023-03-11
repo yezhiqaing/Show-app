@@ -1,8 +1,8 @@
 {
     "usingComponents": {
         "van-search": "../../miniprogram_npm/@vant/weapp/search/index",
-        "HistroyHot":"../../components/HistroyHot/HistroyHot",
-        "ProductList":"../../components/ProductList/ProductList",
-        "TipsList" :"../../components/TipsList/TipsList"
+        "HistroyHot":"/components/HistroyHot/HistroyHot",
+        "ProductList":"/components/ProductList/ProductList",
+        "TipsList" :"/components/TipsList/TipsList"
     }
 }

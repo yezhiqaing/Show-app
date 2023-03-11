@@ -1,1 +1,32 @@
 /* pages/user/user.wxss */
+.login {
+  width: 100wh;
+    height: 200rpx;
+    background-color:burlywood;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20rpx
+    
+    
+
+}
+.loginleft{
+    display: flex;
+    align-items: center;
+
+}
+.login image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+   margin-right: 10rpx;
+}
+.van-popup{
+    width:90%;
+  padding: 40rpx;
+}
+ .popus .van-button{
+   border-radius: 40rpx;
+   margin-top: 30rpx;
+}

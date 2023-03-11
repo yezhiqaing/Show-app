@@ -1,0 +1,11 @@
+<view class="brotherCategory">
+    <van-tabs  active="{{ active }}" bind:change="acticheck">
+  <van-tab  data-id="{{item.id}}"  wx:for="{{brotherCategory}}" wx:key='id' title="{{item.name}}" name="{{item.name}}">
+    <view class="title">
+        <view class="biaotile">{{currentCategory.name}}</view>
+    <view class="frontdesc">{{currentCategory.front_desc}}</view>
+    </view>
+    <Goodslist Goodslist="{{Goodslist}}"></Goodslist>
+  </van-tab>
+</van-tabs>
+</view>

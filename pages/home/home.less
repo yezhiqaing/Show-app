@@ -1,7 +1,111 @@
-swiper{
-    height: 400rpx;
-    image{
-        width: 100vw;
+.Home {
+    padding-bottom: 100rpx;
+
+    swiper {
         height: 400rpx;
+
+        image {
+            width: 100vw;
+            height: 400rpx;
+        }
     }
+
+    .channtitle {
+        margin-top: 20rpx;
+        font-size: 25rpx;
+    }
+
+    .brandList {
+        background-color: white;
+
+        .img {
+            display: block;
+            position: relative;
+        }
+
+        .info {
+            position: absolute;
+            left: 10%;
+            top: 20%;
+
+            .title {
+                font-size: 27rpx;
+            }
+
+            .price {
+                color: red;
+                margin-top: 10rpx;
+                font-size: 24rpx;
+            }
+        }
+
+        .plie {
+            height: 50rpx;
+            font-weight: 600;
+            padding-top: 25rpx;
+            text-align: center;
+            line-height: 50rpx;
+        }
+    }
+
+    .news {
+        margin-top: 30rpx;
+        background-color: white;
+        .newtitle {
+            text-align: center;
+            height: 100rpx;
+            line-height: 100rpx;
+            font-size: 36rpx;
+        }
+    }
+    .popularity{
+        background-color: white;
+        .populvs{
+           height: 100rpx;
+           line-height: 100rpx;
+           text-align: center;
+           font-size: 40rpx;
+        }
+        .popularitylist{
+            padding: 0 70rpx;
+            margin-bottom: 20rpx;
+            display: flex;
+            align-items: center;
+            
+            height: 200rpx;
+            background-color: #fafafa;
+            image{
+                width: 20%;
+            }
+            .hotinfo{
+             height: 100%;
+             display: flex;
+             justify-content: space-around;
+             flex-direction: column;
+             margin-left: 40rpx;
+
+             .name{
+                 font-size: 30rpx;
+             }
+             .goods{
+                 font-size: 20rpx;
+             }
+             .price{
+                color: #8d0000;
+             }
+            }
+        }
+    }
+
+    .fenlei{
+        .fentilte{
+            height: 100rpx;
+            line-height: 100rpx;
+            background-color: white;
+            text-align: center;
+            font-size: 40rpx;
+            padding-top: 30rpx;
+        }
+    }
+
 }

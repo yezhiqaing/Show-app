@@ -1,2 +1,4 @@
-<!--components/TipsList/TipsList.wxml-->
-<text>components/TipsList/TipsList.wxml</text>
+<van-cell-group>
+  <van-cell bind:click="cellClick" data-keyword="{{item}}" wx:for="{{Tipslist}}" wx:key="index" title="{{item}}"/>
+
+</van-cell-group>

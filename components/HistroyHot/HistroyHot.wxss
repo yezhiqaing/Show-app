@@ -1,4 +1,5 @@
 .histroy {
+  margin-bottom: 30rpx;
   background-color: #fff;
   padding: 20rpx;
 }

@@ -1,0 +1,14 @@
+.report {
+    background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.report .solicenter {
+  margin: 20rpx;
+}
+.report .solic {
+  width: 50rpx;
+  height: 5rpx;
+  background: #ccc;
+}

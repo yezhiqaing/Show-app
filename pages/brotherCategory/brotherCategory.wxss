@@ -1,0 +1,18 @@
+.brotherCategory .title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 10rpx 0;
+  height: 200rpx;
+  background-color: white;
+}
+.brotherCategory .title .biaotile {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.brotherCategory .title .frontdesc {
+  margin-top: 40rpx;
+  font-size: 25rpx;
+  color: #a6a2a2;
+}

@@ -1,2 +1,13 @@
-<!--pages/topic/topic.wxml-->
-<text>pages/topic/topic.wxml</text>
+<view class="Specialbox">
+<view class="sholist" wx:for="{{Special}}" wx:key="index">
+ <image mode="widthFix" src="{{item.scene_pic_url}}"></image>
+ <view class="title">{{item.title}}</view>
+ <view class="titlex">{{item.subtitle}}</view>
+ <view class="price">{{d1.RMBmater(item.price_info)}}起</view>
+ <wxs src="/utils/fang.wxs" module="d1"></wxs>
+</view>
+<view class="curr">
+    <van-button bind:click="onclick" class="is"  data-isok="true"  type="{{disok?'plain':''}}">上一页</van-button>
+    <van-button  bind:click="onclick" data-isok="fasle" type="{{disok?'plain':''}}">下一页</van-button>
+</view>
+</view>

@@ -1,10 +1,11 @@
 <van-search
-  value="{{ value }}"
-  placeholder="请输入搜索关键词"
+  value="{{keyword}}"
+  placeholder="{{defaultKeyword.keyword}}"
   show-action
   bind:search="onSearch"
   bind:cancel="onCancel"
+  bind:change="onChange"
 />
-<HistroyHot wx:if="{{blockShow===1}}"></HistroyHot>
-<ProductList wx:elif="{{blockShow===2}}"></ProductList>
-<TipsList wx:else></TipsList>
+<HistroyHot bind:fn="chanblockShow" historyKeywordList="{{historyKeywordList}}" hotKeywordList="{{hotKeywordList}}" wx:if="{{blockShow===1}}"></HistroyHot>
+<ProductList  filterCategoryId="{{filterCategoryId}}" filterCategory="{{filterCategory}}" Goodslist="{{Goodslist}}" bind:fn="categoryChange"  bind:fn2="ProceChang"  wx:elif="{{blockShow===2}}"></ProductList>
+<TipsList bind:fn="chanblockShow"   Tipslist="{{Tipslist}}" wx:else></TipsList>

@@ -1,0 +1,12 @@
+<!--components/Goodslist/Goodslist.wxml-->
+<!-- 商品列表 -->
+<view class="goodslist">
+
+  <view  bindtap="goTodetail" data-id="{{item.id}}" wx:for="{{Goodslist}}" wx:key="index" class="goodslist_item">
+    <image mode="widthFix" src="{{item.list_pic_url}}"></image>
+    <view class="title">{{item.name}}</view>
+    <view class="price">{{d1.RMBmater(item.retail_price)}}</view>
+  </view>
+  <van-empty wx:if="{{Goodslist.length===0}}" class="error" image="network" description="目前搜索不到该类商品" />
+</view>
+<wxs src="../../utils/fang.wxs" module="d1"></wxs>

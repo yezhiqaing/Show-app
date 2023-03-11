@@ -1,0 +1,12 @@
+.bran image {
+  width: 100%;
+}
+.bran .brantitle {
+  height: 150rpx;
+  line-height: 50rpx;
+  padding: 40rpx 20rpx;
+  background-color: white;
+  line-height: 26px;
+  color: #666;
+  font-size: 18px;
+}

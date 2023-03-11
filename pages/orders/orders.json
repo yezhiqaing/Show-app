@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+
+        "van-card": "/miniprogram_npm/@vant/weapp/card",
+        "van-action-sheet": "/miniprogram_npm/@vant/weapp/action-sheet/index",
+        "van-radio": "/miniprogram_npm/@vant/weapp/radio/index",
+        "van-radio-group": "/miniprogram_npm/@vant/weapp/radio-group/index",
+        "van-icon": "/miniprogram_npm/@vant/weapp/icon/index"
+    }
+}

@@ -1,0 +1,87 @@
+.orelist {
+  padding: 0 20rpx;
+}
+.orelist .orddiz {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150rpx;
+  background-color: white;
+  margin: 20rpx 0;
+}
+.orelist .orddiz .ordlist {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.orelist .res {
+  padding: 0 20rpx;
+  background-color: #efefef;
+  width: 100%;
+}
+.orelist .van-radio-group {
+  box-sizing: border-box;
+  width: 94%;
+}
+.orelist .van-radio-group .van-radio {
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+  background-color: white;
+  width: 100%;
+  padding-left: 50rpx;
+}
+.orelist .van-radio-group .arrie {
+  height: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.orelist .dingdan,
+.orelist .time,
+.orelist .freight {
+  margin-top: 10rpx;
+  font-size: 25rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 50rpx;
+}
+.orelist .van-card {
+  background-color: white;
+}
+.orelist .shupp {
+  font-size: 25rpx;
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  height: 50rpx;
+}
+.orelist .shupp input {
+  padding-left: 120px ;
+}
+.botton {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.botton .pay {
+  padding: 20rpx 30rpx;
+  border-radius: 40rpx;
+  background-color: red;
+  color: #ffffff;
+}

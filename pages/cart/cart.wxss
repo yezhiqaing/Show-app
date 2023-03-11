@@ -1,1 +1,20 @@
-/* pages/cart/cart.wxss */
+.van-submit-bar {
+  padding-bottom: 50px;
+}
+.cartbox {
+  padding-bottom: 300rpx;
+}
+.cartbox .van-checkbox {
+  padding: 20rpx;
+  background-color: white;
+}
+.cartbox .van-button {
+  height: 100%;
+}
+.cartbox .van-checkbox__label {
+  width: 100% !important;
+  background-color: white;
+}
+.cartbox .van-card {
+  background-color: white !important;
+}
