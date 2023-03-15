@@ -18,7 +18,11 @@ Page({
     onLoad(options) {
         this.Specialdata()
     },
-     
+    onShow() {
+        this.getTabBar().setData({
+            active: 1
+        })
+    },
   async  Specialdata(){
          let result= await Specialdata({data:{
             page:this.data.page,

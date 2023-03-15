@@ -28,7 +28,6 @@
          this.getTabBar().setData({
              active: 3
          })
-         //  this.cartdata()
      },
      //  单选
      async xuChange(e) {
@@ -125,8 +124,6 @@
          })
 
 
-
-
      },
      // 编辑关闭
      bian() {
@@ -176,18 +173,27 @@
      },
      // 提交订单
      onClickButton() {
-
-         let arr = JSON.stringify(this.data.arr)
-         wx.navigateTo({
-             url: `/pages/orders/orders?orditem=${arr}`,
-         })
-         this.setData({
-             checked: false
-         })
-         this.setData({
-             cartdata: [],
-             counprice: 0
-         })
+        let isok=  this.data.cartdata.some(item=>{
+              return item.checked
+          })
+       if(isok){
+        let arr = JSON.stringify(this.data.arr)
+        wx.navigateTo({
+            url: `/pages/orders/orders?orditem=${arr}`,
+        })
+    
+        this.setData({
+           checked: false,
+            cartdata: [],
+            counprice: 0
+        })
+        return
+       }
+       wx.showToast({
+        title: '请勾选商品在进行提交',
+        icon:"none"
+      })
      }
+    
 
  })

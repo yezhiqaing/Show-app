@@ -16,7 +16,7 @@
             </view>
             <!-- 标题 -->
             <import src="../../pages/details/template/Tip"></import>
-            <template is="ban" data="{{title:'哈哈'}}"></template>
+            <template is="ban" data="{{title:currentCategory.name}}"></template>
             <van-grid center column-num="3">
                 <van-grid-item bindtap="gotoditai" data-item="{{item}}"  use-slot wx:for="{{ currentCategory.subCategoryList }}"  wx:key="index">
                     <image  mode="widthFix" style="width: 50%; height: 90px;" src="{{item.wap_banner_url}}" />
