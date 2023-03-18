@@ -89,7 +89,7 @@
 
      onShowSku() {
          this.setData({
-             show: true
+             show:true
          })
      },
      onClose() {
@@ -99,7 +99,12 @@
      },
      // 点击加入购物车
      async addTocart() {
+       
          if (this.data.show) {
+            this.onClose()
+            if(molog()){
+                return
+            }
              //    如果true的话就关闭和发起请求
              let result = await addCart({
                  data: {
@@ -112,7 +117,7 @@
              this.setData({
                  carttotal: result.data.cartTotal.goodsCount
              })
-             this.onClose()
+             
 
          } else {
              this.onShowSku()
@@ -148,22 +153,29 @@
      },
     //  去往 订单页面
     gotoorders(){
+        //  let token=wx.getStorageSync('Token')
+    //    if(molog()){
         if(this.data.show){
-    let {name,retail_price,list_pic_url}=this.data.info
-           let orditem=JSON.stringify([
-            {
-                name:name,
-                number:this.data.skustep,
-                market_price:retail_price,
-                list_pic_url:list_pic_url
-               }
-           ])
-          wx.navigateTo({
-            url: `/pages/orders/orders?orditem=${orditem}`,
-          })
-        }else{
-            this.onShowSku()
-        }
+            let {name,retail_price,list_pic_url}=this.data.info
+                this.onClose()
+                  if(molog()){
+                      return
+                  }
+                   let orditem=JSON.stringify([
+                    {
+                        name:name,
+                        number:this.data.skustep,
+                        market_price:retail_price,
+                        list_pic_url:list_pic_url
+                       }
+                   ])
+                  wx.navigateTo({
+                    url: `/pages/orders/orders?orditem=${orditem}`,
+                  })
+                }else{
+                    this.onShowSku()
+                }
+    //    }
      
      }
 
